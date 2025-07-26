@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="home.html" class="nav-logo">Home</a>
+            </div>
+            <div class="nav-right">
+                <a href="info.html" class="nav-link">Info</a>
+                <a href="drink.html" class="nav-link">Drink</a>
+                <a href="place.html" class="nav-link">Place</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="profile-area">
+                    <img src="profile.png" alt="Profile" class="profile-img">
+                    <span class="profile-name">Guest</span>
+                    <a href="signup.html" class="login-btn">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+ <div class="shop-title">
+    <h1 class="shop-name">Fresh Drink Cafe</h1>
+    <p class="shop-desc">
+        ร้านน้ำสดชื่นสำหรับทุกวัย<br>
+        เมนูเครื่องดื่มหลากหลาย โกโก้เย็น ชาไทย กาแฟ และอีกมากมาย<br>
+        สดใหม่ทุกวัน บรรยากาศเป็นกันเอง พร้อมบริการด้วยรอยยิ้ม 😊
+    </p>
+<script>
+    window.addEventListener("load",function() {
+
+        document.querySelector("header").classList.add("show")
+    });
+</script>
+<!-- <div class="hidden-on-scroll">ยินดีต้อนรับสู่เว็บไซต์เรา!</div>
+<div style="height: 100vh;"></div>
+<div class="hidden-on-scroll">บริการของเรา</div>
+<div class="hidden-on-scroll">ติดต่อเรา</div>.
+
+<script>
+  const elements = document.querySelectorAll(".hidden-on-scroll");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script> -->
+ <div class="order-card">
+        <h2 class="product-title">โกโก้เย็น</h2>
+        <img src="08.jpg" alt="โกโก้เย็น" class="product-img">
+        <button class="order-btn" onclick="orderSuccess()">สั่งซื้อ</button>
+        <div class="order-success" id="orderSuccess" style="display:none;">
+            <p>ขอบคุณสำหรับการสั่งซื้อ!</p>
+        </div>  
+    </div>
+    <script>
+        function orderSuccess() {
+            document.getElementById('orderSuccess').style.display = 'block';
+        }
+    </script>
+     <div class="order-card1">
+        <h2 class="product-title1">ชาไทย</h2>
+        <img src="ชาไทย.jpg" alt="ชาไทย" class="product-img1">
+        <button class="order-btn1" onclick="orderSuccess1()">สั่งซื้อ</button>
+        <div class="order-success1" id="orderSuccess1" style="display:none;">
+            <p>ขอบคุณสำหรับการสั่งซื้อ!</p>
+        </div>  
+    </div>
+    <script class="ชาไทย">
+        function orderSuccess1() {    
+            document.getElementById('orderSuccess1').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
